@@ -1,0 +1,193 @@
+.slider__banner {
+      position: relative;
+      padding-bottom: 80px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $border-color;
+
+      &-heading {
+            display: inline-block;
+            margin-bottom: 30px;
+
+            &:before {
+                  content: "";
+                  position: absolute;
+                  width: 78%;
+                  height: 1px;
+                  background-color: #eaeaea;
+                  top: 3%;
+                  left: 14%;
+            }
+      }
+
+      &-list {
+            margin-right: -28px;
+      }
+
+      &-item {
+
+            &:first-child {
+                  padding-left: 0;
+            }
+
+            &:last-child {
+                  padding-left: 0;
+            }
+      }
+
+      &-link-wrapper {
+            margin-bottom: 25px;
+      }
+
+      &-link {
+            img {
+                  height: 190px;
+            }
+      }
+
+      &-info {
+            display: flex;
+      }
+
+      &-calendar {
+            text-align: center;
+            margin-right: 20px;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            padding: 8px 12px;
+            border: 1px solid #eaeaea;
+
+            &-day {
+                  font-size: 25px;
+                  line-height: 23px;
+                  color: $title-color;
+                  font-weight: bold;
+            }
+
+            &-month {
+                  font-size: 12px;
+            }
+      }
+
+      &-desc {
+            &-author {
+                  a {
+                        color: $hover-color;
+                  }
+            }
+
+            &-title {
+                  a {
+                        font-weight: 600;
+                        font-size: 14px;
+                        color: $title-color;
+                        margin-bottom: 10px;
+                  }
+            }
+
+            &-text {
+                  @include text-line(3);
+                  color: $text-color;
+            }
+      }
+
+      // ?============ Animation when Hover Image =================
+      &-link {
+            position: relative;
+            background-color: #000;
+
+            &:hover img {
+                  opacity: 0.6;
+                  -webkit-transition: all 0.15s ease;
+                  -moz-transition: all 0.15s ease;
+                  -o-transition: all 0.15s ease;
+                  -ms-transition: all 0.15s ease;
+                  transition: all 0.15s ease;
+            }
+
+            &:before {
+                  content: "";
+                  position: absolute;
+                  top: 15px;
+                  left: 15px;
+                  right: 15px;
+                  bottom: 15px;
+                  transform: scaleX(0);
+                  border-top: 1px solid rgba(255, 255, 255, 0.8);
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+            }
+
+            &:hover:before {
+                  transform: scaleX(1);
+                  -webkit-transition: all 0.25s ease-out;
+                  -moz-transition: all 0.25s ease-out;
+                  -o-transition: all 0.25s ease-out;
+                  -ms-transition: all 0.25s ease-out;
+                  transition: all 0.25s ease-out;
+            }
+
+            &:after {
+                  content: "";
+                  position: absolute;
+                  top: 15px;
+                  left: 15px;
+                  right: 15px;
+                  bottom: 15px;
+                  transform: scaleY(0);
+                  border-left: 1px solid rgba(255, 255, 255, 0.8);
+                  border-right: 1px solid rgba(255, 255, 255, 0.8);
+            }
+
+            &:hover:after {
+                  transform: scaleY(1);
+                  -webkit-transition: all 0.25s ease-out;
+                  -moz-transition: all 0.25s ease-out;
+                  -o-transition: all 0.25s ease-out;
+                  -ms-transition: all 0.25s ease-out;
+                  transition: all 0.25s ease-out;
+            }
+      }
+}
+
+// ?================================================================
+#slider-2 {
+      .owl-carousel.owl-theme .owl-nav {
+            position: absolute;
+            top: -22.5%;
+            right: -0.5%;
+      }
+
+      .slider-2 {
+            color: #ccc;
+            font-size: 14px;
+            padding: 7px 8px;
+            border: 1px solid $border-color;
+
+            &:hover {
+                  color: #fff;
+                  background-color: $hover-color;
+            }
+
+      }
+
+}
+
+// !=*=*=*=*=*=* Slider FOOTER*=*=*=*=*=*=*=*=*
+.slider__footer {
+      position: relative;
+      margin-bottom: 50px;
+
+      &-list {}
+
+      &-item {
+            padding: 2px 0;
+
+            &:hover {
+                  background-color: $border-color;
+            }
+      }
+
+      &-link {}
+
+      &-img {}
+}

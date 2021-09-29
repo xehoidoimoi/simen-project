@@ -1,0 +1,51 @@
+.search {
+      &__hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            margin-bottom: 15px;
+            background-color: #fff;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+            z-index: 99;
+            display: none;
+            animation: HeaderNotifyGrowth ease-in 0.23s;
+            will-change: transform, opacity;
+      }
+
+      &__input {
+            width: inherit;
+            padding: 15px 20px;
+            line-height: 1.6;
+            border: 0;
+            color: $text-color;
+            outline: none;
+            font-weight: 400;
+            font-size: 1.2rem;
+            font-family: 'Poppins', sans-serif;
+      }
+
+      &__btn {
+            outline: none;
+            border: 0;
+            border-left: 1px solid;
+            border-color: rgba(234, 234, 234, 1);
+            padding-right: 20px;
+            padding-left: 20px;
+            margin: 10px 0;
+            font-size: 12px;
+            font-weight: 700;
+            color: $hover-color;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            background-color: #fff;
+            cursor: pointer;
+      }
+}
+
+.sub-header__search:hover .search__hover {
+      display: flex;
+}

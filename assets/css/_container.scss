@@ -1,0 +1,10 @@
+.container {
+      position: relative;
+      z-index: 9;
+}
+
+@import './container/_feature.scss';
+@import './container/_axelProduct.scss';
+@import './container/_productColumns.scss';
+@import './container/_banner.scss';
+@import './container/_sliderBanner.scss';

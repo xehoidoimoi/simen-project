@@ -1,0 +1,156 @@
+.banner {
+      margin-bottom: 55px;
+
+      &__link-1 {
+            position: relative;
+
+            &:before,
+            &:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 5;
+                  -webkit-transition: all 0.6s ease-in-out;
+                  -o-transition: all 0.6s ease-in-out;
+                  transition: all 0.6s ease-in-out;
+            }
+
+            &:hover:before {
+                  left: 50%;
+                  right: 50%;
+                  background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            &:hover:after {
+                  top: 50%;
+                  bottom: 50%;
+                  background-color: rgba(255, 255, 255, 0.3);
+            }
+      }
+
+      // ?============================================
+      &__link-2 {
+            position: relative;
+            margin-right: 3px;
+            overflow: hidden;
+            vertical-align: top;
+            transition: all 0.25s linear;
+            background-color: #333;
+            -webkit-transition: all 0.25s ease;
+            -o-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+
+            img {
+                  -webkit-transition: all 0.3s ease;
+                  -o-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+            }
+
+            &:hover img {
+                  opacity: 0.3;
+            }
+
+            &:before {
+                  position: absolute;
+                  content: "";
+                  top: 15px;
+                  left: 15px;
+                  width: 0;
+                  height: 0;
+                  border: 1px solid transparent;
+            }
+
+            &:after {
+                  position: absolute;
+                  content: "";
+                  right: 13px;
+                  bottom: 11px;
+                  width: 0;
+                  height: 0;
+                  border: 1px solid transparent;
+            }
+
+            &:hover:before {
+                  animation: animate1 0.3s linear forwards;
+            }
+
+            &:hover:after {
+                  animation: animate2 0.3s linear forwards;
+                  animation-delay: 0.3s;
+            }
+      }
+
+      // ?========================================
+      &__link-3 {
+            position: relative;
+
+            &:before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  opacity: 0;
+                  background-image: url(../img/plus.png);
+                  background-color: rgba(0, 0, 0, 0.3);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  transform: scale(0.4) rotateY(360deg);
+                  transition: all 0.4s ease;
+            }
+
+            &:hover::before {
+                  opacity: 0.5;
+                  transform: scale(1) rotateY(0deg);
+            }
+      }
+
+      &__link-4 {
+            position: relative;
+
+            &:before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  z-index: 5;
+                  -webkit-transition: all 0.35s ease-in-out;
+                  -o-transition: all 0.35s ease-in-out;
+                  transition: all 0.35s ease-in-out;
+            }
+
+            &:hover:before {
+                  padding-left: 50%;
+                  background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            &:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  z-index: 5;
+                  -webkit-transition: all 0.35s ease-in-out;
+                  -o-transition: all 0.35s ease-in-out;
+                  transition: all 0.35s ease-in-out;
+            }
+
+            &:hover:after {
+                  padding-right: 50%;
+                  background-color: rgba(0, 0, 0, 0.3);
+            }
+      }
+
+      &__right {
+
+            &-bottom {
+                  margin-top: 25px;
+            }
+      }
+}

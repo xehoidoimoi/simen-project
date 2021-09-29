@@ -1,0 +1,35 @@
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap, $dir: row) {
+      display: flex;
+      align-items: $align;
+      justify-content: $justify;
+      flex-wrap: $wrap;
+      flex-direction: $dir;
+}
+
+@mixin pseudo ($top: 0, $left, $bd-width: 8px, $bd-height: 8px) {
+      content: " ";
+      position: absolute;
+      display: block;
+      border-style: solid;
+      top: $top;
+      left: $left;
+      border-width: $bd-width $bd-height;
+      border-color: transparent transparent #fff transparent;
+}
+
+@mixin pseudo__transparent ($top: 10px, $left: 10px, $width: inherit, $height: 10px) {
+      content: " ";
+      position: absolute;
+      top: $top;
+      left: $left;
+      width: $width;
+      height: $height;
+      background-color: transparent;
+}
+
+@mixin text-line ($line: 1) {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: $line;
+}

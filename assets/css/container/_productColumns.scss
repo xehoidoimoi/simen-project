@@ -1,0 +1,80 @@
+.product__column {
+      margin-bottom: 55px;
+
+      &-heading {
+            width: fit-content;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid currentColor;
+            position: relative;
+
+            &:before {
+                  content: "";
+                  position: absolute;
+                  bottom: -14px;
+                  right: 50%;
+                  border-style: solid;
+                  border-width: 6px 5px;
+                  transform: translateX(50%);
+                  transition: all 0.2s ease-in;
+                  border-color: #000 transparent transparent transparent;
+            }
+      }
+
+      &-wrapper {
+            max-height: 370px;
+            border: 1px solid $border-color;
+      }
+
+      &-item-list {
+            padding: 20px;
+      }
+
+      &-item {
+            &-item {
+                  display: flex;
+                  margin-bottom: 20px;
+
+                  &:hover {
+                        .product__column-item-img {
+                              border-color: $hover-color;
+                        }
+
+                        .product__column-item-heading {
+                              a {
+                                    color: $hover-color;
+                              }
+                        }
+                  }
+
+            }
+
+            &-img {
+                  max-width: 80px;
+                  max-height: 97px;
+                  transition-duration: 0.25s;
+                  border: 1px solid $border-color;
+            }
+
+            &-link {
+                  img {
+                        display: inline-block;
+                  }
+            }
+
+            &-info {
+                  padding-left: 12px;
+            }
+
+            &-heading {
+                  a {
+                        font-size: 13px;
+                        color: $text-color;
+                        padding-top: 6px;
+                        @include text-line(2);
+                        transition-duration: 0.25s;
+                  }
+            }
+      }
+
+}
